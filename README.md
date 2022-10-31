@@ -12,6 +12,6 @@ If you want to periodically check the total and post a message in chat only when
 
 Settings > Timed Actions > movemberTimer, set the interval to 30 seconds or whatever delay you think is best.
 
-The default text is "Total: 0", you can change it by editing the C# code under "Sub action > Execute code".
+The default text is "Total: $0", you can change it by editing the C# code under "Sub action > Execute code".
 
 This is unofficial and not endorsed or supported by the movember.com. Use at own risk. They may block too many requests or break compatibility at any time.
