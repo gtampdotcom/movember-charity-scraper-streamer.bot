@@ -1,0 +1,17 @@
+# movember-charity-scraper-streamer.bot
+
+C# script for https://streamer.bot that scrapes the total donation amount from a https://au.movember.com charity page, saves it to a text file and outputs it to Twitch or YouTube chat.
+
+Copy the big line of text below, run Streamer.bot, click on the Import tab and paste the text into the Import String textbox.
+
+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
+
+It should import a command called !movember
+
+If you want to periodically check the total and post a message in chat only when the total changes, add a Timed Action in streamer bot:
+
+Settings > Timed Actions > movemberTimer, set the interval to 30 seconds or whatever delay you think is best.
+
+The default text is "Total: 0", you can change it by editing the C# code under "Sub action > Execute code".
+
+This is unofficial and not endorsed or supported by the movember.com. Use at own risk. They may block too many requests or break compatibility at any time.
