@@ -22,7 +22,11 @@ public class CPHInline
 			int end = page.IndexOf(searchWordEnd,start);
 			total = page.Substring(start,end-start).Trim();
 			total = total.Replace("$" , "");
+			total = total.Replace("£","");
+			total = total.Replace("€","");
 			oldTotal = oldTotal.Replace("$" , "");
+			oldTotal = oldTotal.Replace("£" , "");
+			oldTotal = oldTotal.Replace("€" , "");
 		}
 		else
 		{
@@ -31,7 +35,7 @@ public class CPHInline
  
 		if(Convert.ToDouble(oldTotal) < Convert.ToDouble(total))
 		{
-			CPH.SendMessage("Total: $" + total);
+			CPH.SendMessage("Total: " + total);
 			File.WriteAllText(filename, total);
 		}
 		
